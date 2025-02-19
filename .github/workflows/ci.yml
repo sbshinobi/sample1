@@ -26,5 +26,5 @@ jobs:
       - name: "upload product-ready build files"
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: dist
+         name: build
+         path: dist

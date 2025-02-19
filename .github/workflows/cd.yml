@@ -21,10 +21,10 @@ jobs:
             - name: "Download build files"
               uses: actions/download-artifact@v4
               with:
-                    name: build
-                    run-id: ${{ github.event.workflow_run.id }}
-                    github-token: ${{ github.token }}
+                name: build
+                run-id: ${{ github.event.workflow_run.id }}
+                github-token: ${{ github.token }}
             - name: "Deploy to vercel"
-              run: vercel --prod --tokens=${{ secrets.VERCEL_TOKEN }} --confirm --name=sample1
+              run: vercel --prod --tokens=${{ secrets.VERCEL_TOKEN }} --confirm --name=sample1cicd
 
                          
