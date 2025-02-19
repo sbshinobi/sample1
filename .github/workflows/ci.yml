@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v2
       - name: 'Install dependencies'
         run: npm install
-     
+      - name: "Install plugins"
+        run: npm install @rollup/plugin-image --save-dev
       - name: "Build the app"
         run: npm run build
       - name: "upload product-ready build files"
