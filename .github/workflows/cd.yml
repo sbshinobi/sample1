@@ -14,7 +14,7 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: '21'
-            - name: "Check node version"
+            - name: "Check node.js version"
               run: node --version
             - name: "Install vercel CLI"
               run: npm install -g vercel
@@ -23,7 +23,7 @@ jobs:
               with:
                     name: build
                     run-id: ${{ github.event.workflow_run.id }}
-                    github-token: ${{ secrets.GITHUB_TOKEN }}
+                    github-token: ${{ github.token }}
             - name: "Deploy to vercel"
               run: vercel --prod --tokens=${{ secrets.VERCEL_TOKEN }} --confirm --name=sample1
 
